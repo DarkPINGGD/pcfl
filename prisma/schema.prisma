@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Level {
+  id        Int     @id @default(autoincrement())
+  name      String
+  creator   String
+  verifier  String
+  position  Int
+  score     Float
+  listType  String
+}
